@@ -1,7 +1,7 @@
 import os
 import time
 
-from config import *
+PATH = "C:\\VirtualBox\\Virtual_share\\FasadBG_it\\Fasad\\bin\\Debug\\nc"
 
 order = input("Введите номер заказа: ") + "nc"
 mun = float(input("Введите толщину прокладки: ").replace(",", "."))
@@ -17,7 +17,7 @@ if order in os.listdir(PATH):
                 s = s[0] + 'tPODK=' + '\n'.join(podk)
             with open("{PATH}\\{order}\\{i}".format(PATH=PATH, order=order, i=i), "w") as file:
                 file.write(s)
-    print("Заказ:", order, "измененна")
+    print("Заказ:", order[:4], "измененна")
     time.sleep(10)
 else:
     print("Папка с таким названием отсутствует")
