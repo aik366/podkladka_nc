@@ -35,11 +35,9 @@ def modify_file(filename, freza, speed):
             file.writelines(lines)
         print("Файл успешно изменён.")
         time.sleep(1)
-        exit()
     else:
         print("Изменений не требуется.")
         time.sleep(1)
-        exit()
 
 
 if order in os.listdir(PATH):
